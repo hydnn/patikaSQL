@@ -1,0 +1,72 @@
+1-test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+2-Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+3-Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+4-Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+-- -- CREATE TABLE employee(
+-- -- 	id SERIAL PRIMARY KEY, 
+-- -- 	name VARCHAR(50) NOT NULL, 
+-- -- 	birthday DATE, 
+-- -- 	email VARCHAR(100)
+-- -- );
+
+-- insert into employee (name, email, birthday) values ('Dayle Darnody', 'ddarnody0@rakuten.co.jp', '1997-10-20');
+-- insert into employee (name, email, birthday) values ('Leighton Bloodworth', 'lbloodworth1@time.com', '1996-12-21');
+-- insert into employee (name, email, birthday) values ('Viola Knightley', 'vknightley2@myspace.com', '1987-12-30');
+-- insert into employee (name, email, birthday) values ('Hadrian Wanklin', 'hwanklin3@shop-pro.jp', '1985-09-09');
+-- insert into employee (name, email, birthday) values ('Nathanil Bransby', 'nbransby4@gizmodo.com', '1991-04-23');
+-- insert into employee (name, email, birthday) values ('Llewellyn Yeliashev', 'lyeliashev5@irs.gov', '1992-07-02');
+-- insert into employee (name, email, birthday) values ('Dionisio Dearth', 'ddearth6@zdnet.com', '1983-10-20');
+-- insert into employee (name, email, birthday) values ('Del Rudd', 'drudd7@comcast.net', '1988-06-03');
+-- insert into employee (name, email, birthday) values ('Katherine Hyder', 'khyder8@wufoo.com', '1998-02-13');
+-- insert into employee (name, email, birthday) values ('Ave Liddard', 'aliddard9@addtoany.com', '1995-07-05');
+-- insert into employee (name, email, birthday) values ('Loria Bozward', 'lbozwarda@ox.ac.uk', '1988-02-08');
+-- insert into employee (name, email, birthday) values ('Vilhelmina Pankhurst.', 'vpankhurstb@narod.ru', '1992-10-26');
+-- insert into employee (name, email, birthday) values ('Sande Simoneton', 'ssimonetonc@goo.ne.jp', '1997-09-17');
+-- insert into employee (name, email, birthday) values ('Frederica MacGow', 'fmacgowd@macromedia.com', '1989-06-01');
+-- insert into employee (name, email, birthday) values ('Robyn Margiotta', 'rmargiottae@nymag.com', '1983-09-09');
+-- insert into employee (name, email, birthday) values ('Alice Edney', 'aedneyf@state.gov', '2000-01-02');
+-- insert into employee (name, email, birthday) values ('Dianna Whitty', 'dwhittyg@furl.net', '1991-07-16');
+-- insert into employee (name, email, birthday) values ('Katrina Klouz', 'kklouzh@lulu.com', '1996-07-31');
+-- insert into employee (name, email, birthday) values ('Moina Rockingham', 'mrockinghami@sun.com', '1988-11-30');
+-- insert into employee (name, email, birthday) values ('Jobey Antuk', 'jantukj@dyndns.org', '1999-07-09');
+-- insert into employee (name, email, birthday) values ('Terri Seargeant', 'tseargeantk@sina.com.cn', '2000-09-07');
+-- insert into employee (name, email, birthday) values ('Basil Askey', 'baskeyl@columbia.edu', '1989-07-21');
+-- insert into employee (name, email, birthday) values ('Judye Saynor', 'jsaynorm@google.es', '1995-10-27');
+-- insert into employee (name, email, birthday) values ('Nester Dory', 'ndoryn@wp.com', '2000-02-20');
+-- insert into employee (name, email, birthday) values ('Kilian Radborne', 'kradborneo@bbc.co.uk', '1988-08-03');
+-- insert into employee (name, email, birthday) values ('Jamesy Winspur', 'jwinspurp@addthis.com', '1984-12-27');
+-- insert into employee (name, email, birthday) values ('Stefa Greswell', 'sgreswellq@miitbeian.gov.cn', '1982-10-30');
+-- insert into employee (name, email, birthday) values ('Othilie Eyree', 'oeyreer@ted.com', '1986-06-04');
+-- insert into employee (name, email, birthday) values ('Vinita Anlay', 'vanlays@cbsnews.com', '1997-06-23');
+-- insert into employee (name, email, birthday) values ('Benjamen Proske', 'bprosket@google.nl', '1998-12-12');
+-- insert into employee (name, email, birthday) values ('Patton Harland', 'pharlandu@umn.edu', '1985-09-02');
+-- insert into employee (name, email, birthday) values ('Marten Kezar', 'mkezarv@behance.net', '1980-03-01');
+-- insert into employee (name, email, birthday) values ('Dasha Hollidge', 'dhollidgew@nasa.gov', '1996-05-08');
+-- insert into employee (name, email, birthday) values ('Shea Duffy', 'sduffyx@bigcartel.com', '1987-10-12');
+-- insert into employee (name, email, birthday) values ('Shaylah Chrishop', 'schrishopy@eepurl.com', '1988-01-06');
+-- insert into employee (name, email, birthday) values ('Roland Richichi', 'rrichichiz@sfgate.com', '1980-12-25');
+-- insert into employee (name, email, birthday) values ('Sargent Sissens', 'ssissens10@webnode.com', '1993-03-03');
+-- insert into employee (name, email, birthday) values ('Rhoda Felce', 'rfelce11@sbwire.com', '1986-06-27');
+-- insert into employee (name, email, birthday) values ('Shalna Bazley', 'sbazley12@time.com', '1994-04-25');
+-- insert into employee (name, email, birthday) values ('Kimberly Ganning', 'kganning13@gov.uk', '1984-04-03');
+-- insert into employee (name, email, birthday) values ('Morlee Ramsted', 'mramsted14@pinterest.com', '1999-03-22');
+-- insert into employee (name, email, birthday) values ('Carver Milmith', 'cmilmith15@shop-pro.jp', '1988-01-16');
+-- insert into employee (name, email, birthday) values ('Ripley Fidilis', 'rfidilis16@sun.com', '1980-05-21');
+-- insert into employee (name, email, birthday) values ('Raychel Kennaway', 'rkennaway17@google.es', '1996-02-18');
+-- insert into employee (name, email, birthday) values ('Cody Yankishin', 'cyankishin18@omniture.com', '1995-06-02');
+-- insert into employee (name, email, birthday) values ('Hadlee Wilman', 'hwilman19@vistaprint.com', '2000-04-09');
+-- insert into employee (name, email, birthday) values ('Jeno Gerry', 'jgerry1a@twitter.com', '1981-06-07');
+-- insert into employee (name, email, birthday) values ('Jessa Burtt', 'jburtt1b@devhub.com', '1999-07-11');
+-- insert into employee (name, email, birthday) values ('Trudey Dackombe', 'tdackombe1c@jugem.jp', '1995-10-29');
+-- insert into employee (name, email, birthday) values ('Rodger Form', 'rform1d@reverbnation.com', '1986-04-09');
+
+-- UPDATE <tablo_adı>
+-- SET <sütun_adı> = değer, 
+--     <sütun_adı> = değer,
+--     ----
+-- WHERE <koşul_adı>;
+
+-- DELETE FROM <tablo_adı>
+-- WHERE <koşul_adı>;
+
